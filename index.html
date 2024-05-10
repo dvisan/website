@@ -6,7 +6,6 @@
     <meta name="description" content="My Website">
   	
     <title>Daniel's Blog</title>
-   <!-- <link rel="stylesheet" href="./css/style.css"> -->
 	
 	<style>
 	body {
@@ -51,6 +50,33 @@
   margin-top:5px;
 }
 
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
 sectio{
 background:  ;
 }
@@ -67,7 +93,14 @@ background:  ;
           <ul>
             <li><a href="#" style="text-decoration:none; color:white;" onclick="showSection(); return false;"><span class="highlight">Home</span></a></li>
             <li><a href="http://danu.myvnc.com" style="text-decoration:none;color:white;" target="_blank">Server</a></li>
-            <li><a href="https://www.youtube.com/" style="text-decoration:none ;color:white;" onclick="openIframe(); return false;"></a></li>
+            <li class="dropdown">
+              <a href="javascript:void(0)" class="dropbtn" style="text-decoration:none ;color:white;">Dropdown</a>
+              <div class="dropdown-content">
+                <a href="#">Link 1</a>
+                <a href="#">Link 2</a>
+                <a href="#">Link 3</a>
+              </div>
+            </li>
           </ul>
         </nav>
 	   
