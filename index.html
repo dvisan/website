@@ -3,23 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>File Viewer</title>
+    <title>File List</title>
 </head>
 <body>
-    <input type="file" id="fileInput">
-    <pre id="fileContent"></pre>
+    <h1>Files in Current Directory:</h1>
+    <ul id="fileList"></ul>
 
     <script>
-        document.getElementById('fileInput').addEventListener('change', function(event) {
-            const file = event.target.files[0];
-            if (file) {
-                const reader = new FileReader();
-                reader.onload = function(e) {
-                    document.getElementById('fileContent').textContent = e.target.result;
-                };
-                reader.readAsText(file);
-            }
-        });
+        fetch('/files')
+            .then(response => response.json())
+            .then(files => {
+                const list = document.getElementById('fileList');
+                files.forEach(file => {
+                    const listItem = document.createElement('li');
+                    listItem.textContent = file;
+                    list.appendChild(listItem);
+                });
+            })
+            .catch(error => console.error('Error:', error));
     </script>
 </body>
 </html>
