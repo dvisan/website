@@ -4,9 +4,9 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
     <meta name="description" content="Website">
-  	
+
     <title>Daniel's Blog</title>
-	
+
 	<style>
 	body {
 	height: 100%;
@@ -17,14 +17,21 @@
 	html{
 	height: 100%;
 }
-	
+
 	li{
   float:left;
   display:inline;
   padding: 0 20px 0 20px;
   text-transform:uppercase;
-} 
-	
+}
+
+header h1 {
+   display: block;
+   font-size: 2em;
+   margin-block-start: 0.67em;
+   margin-block-end: 0.01em; /* Adjust this value to change the bottom margin */
+}
+
 	header {
 	    background-color:#35424a;
 		padding-bottom:0px;
@@ -36,46 +43,22 @@
     header #branding{
      float:left;
 	 padding:0;
+   margin-bottom: auto;
 }
 
     .container{
-  width:90%;
-  margin:auto;
+  width:95%;
+  margin: auto;
+  margin-bottom: 1px;
   overflow:hidden;
 }
-  
+
   nav{
   float:right;
-  margin:5px; 
-  margin-top:5px;
+  margin:2px;
+  margin-top:2px;
 }
 
-.dropdown {
-  position: relative;
-  display: inline-block;
-}
-
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: #f9f9f9;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
-}
-
-.dropdown-content a {
-  color: black;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-}
-
-.dropdown-content a:hover {background-color: #f1f1f1}
-
-.dropdown:hover .dropdown-content {
-  display: block;
-}
 
 sectio{
 background:  ;
@@ -88,43 +71,38 @@ background:  ;
         <div id="branding">
           <h1><span style="color:#e8491d ;font-size:100%">Daniel's</span> Blog</h1>
 	   </div>
-	   
+
 	   <nav>
           <ul>
-            <li><a href="#" style="text-decoration:none; color:white;" onclick="showSection(); return false;"><span class="highlight">Home</span></a></li>
-            <li><a href="http://danu.myvnc.com" style="text-decoration:none;color:white;" target="_blank">Server</a></li>
-            <li class="dropdown">
-              <a href="javascript:void(0)" class="dropbtn" style="text-decoration:none ;color:white;">Dropdown</a>
-              <div class="dropdown-content">
-                <a href="#">Link 1</a>
-                <a href="#">Link 2</a>
-                <a href="#">Link 3</a>
-              </div>
+            <li><a href="#" style="text-decoration:none; color:white;"><span class="highlight">Home</span></a></li>
+            <li><a href="articles.html" style="text-decoration:none;color:white;" target="_blank">Articles</a></li>
+            <li><a href="/files" style="text-decoration:none ;color:white;">Files</a>
+
             </li>
           </ul>
         </nav>
-	   
+
       </div>
-	  
-	  
+
+
     </header>
-	
+
 
    <section id="mySection">
-   
+
    <p style="font-size:120%">
    This is the first paragraph on this website
    </p>
   <h1> <a href="https://www.youtube.com/watch?v=EXfFBEuCAr0" style="text-decoration:none; color:#e8491d" target="blank" >How to host your website on github</a></h1>
-  
-   </section>
-   
-   <iframe id="myFrame" style="display:none; width:100%; height:100%"></iframe>
-     
-    
 
-   
-	
+   </section>
+
+   <iframe id="myFrame" style="display:none; width:100%; height:100%"></iframe>
+
+
+
+
+
 	<script>
 	function openIframe() {
 	    var iframe = document.getElementById('myFrame');
@@ -133,7 +111,7 @@ background:  ;
 	    section.style.display = "none";
 	    iframe.src = "http://filmeserialeonline.org";
 	}
-	
+
 	function showSection() {
 	    var iframe = document.getElementById('myFrame');
 	    var section = document.getElementById('mySection');
@@ -141,6 +119,6 @@ background:  ;
 	    section.style.display = "block";
 	}
 	</script>
-	
+
   </body>
 </html>
