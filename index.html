@@ -1,26 +1,125 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>File List</title>
-</head>
-<body>
-    <h1>Files in Current Directory:</h1>
-    <ul id="fileList"></ul>
 
-    <script>
-        fetch('/files')
-            .then(response => response.json())
-            .then(files => {
-                const list = document.getElementById('fileList');
-                files.forEach(file => {
-                    const listItem = document.createElement('li');
-                    listItem.textContent = file;
-                    list.appendChild(listItem);
-                });
-            })
-            .catch(error => console.error('Error:', error));
-    </script>
-</body>
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <meta name="description" content="Website">
+
+    <title>Daniel's Blog</title>
+
+	<style>
+	body {
+	height: 100%;
+	padding:0;
+	margin:0;
+	background:grey;
+}
+	html{
+	height: 100%;
+}
+
+	li{
+  float:left;
+  display:inline;
+  padding: 0 20px 0 20px;
+  text-transform:uppercase;
+}
+
+header h1 {
+   display: block;
+   font-size: 2em;
+   margin-block-start: 0.67em;
+   margin-block-end: 0.01em; /* Adjust this value to change the bottom margin */
+}
+
+	header {
+	    background-color:#35424a;
+		padding-bottom:0px;
+		border-bottom:#e8491d 3px solid;
+		min-height:10px;
+		margin-bottom: 5px;
+}
+
+    header #branding{
+     float:left;
+	 padding:0;
+   margin-bottom: auto;
+}
+
+    .container{
+  width:95%;
+  margin: auto;
+  margin-bottom: 1px;
+  overflow:hidden;
+}
+
+  nav{
+  float:right;
+  margin:2px;
+  margin-top:2px;
+}
+
+
+sectio{
+background:  ;
+}
+	</style>
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <div id="branding">
+          <h1><span style="color:#e8491d ;font-size:100%">Daniel's</span> Blog</h1>
+	   </div>
+
+	   <nav>
+          <ul>
+            <li><a href="#" style="text-decoration:none; color:white;"><span class="highlight">Home</span></a></li>
+            <li><a href="articles.html" style="text-decoration:none;color:white;" target="_blank">Articles</a></li>
+            <li><a href="/files" style="text-decoration:none ;color:white;">Files</a>
+
+            </li>
+          </ul>
+        </nav>
+
+      </div>
+
+
+    </header>
+
+
+   <section id="mySection">
+
+   <p style="font-size:120%">
+   This is the first paragraph on this website
+   </p>
+  <h1> <a href="https://www.youtube.com/watch?v=EXfFBEuCAr0" style="text-decoration:none; color:#e8491d" target="blank" >How to host your website on github</a></h1>
+
+   </section>
+
+   <iframe id="myFrame" style="display:none; width:100%; height:100%"></iframe>
+
+
+
+
+
+	<script>
+	function openIframe() {
+	    var iframe = document.getElementById('myFrame');
+	    var section = document.getElementById('mySection');
+	    iframe.style.display = "block";
+	    section.style.display = "none";
+	    iframe.src = "http://filmeserialeonline.org";
+	}
+
+	function showSection() {
+	    var iframe = document.getElementById('myFrame');
+	    var section = document.getElementById('mySection');
+	    iframe.style.display = "none";
+	    section.style.display = "block";
+	}
+	</script>
+
+  </body>
 </html>
