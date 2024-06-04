@@ -1,24 +1,84 @@
+<!DOCTYPE html>
 <html>
-        <head>
-            <meta charset="utf-8">
-            <link rel="stylesheet" href="css/style.css">
-            <link href="https://fonts.googleapis.com/css?family=Karla" rel="stylesheet">
-            <title>slide image tutorial</title>
-        </head>
-        <body>
-        <h1>Auto - Image Slider HTML and CSS</h1>
-        <div class="slider-frame">
-            <div class="slide-images">
-                    <div class="img-container">
-                        <img src="img/1.jpg">
-                    </div>
-                    <div class="img-container">
-                        <img src="img/2.jpg">
-                    </div>
-                    <div class="img-container">
-                        <img src="img/3.jpg">
-                    </div>
-            </div>
-        </div>
-        </body>
-    </html>
+<head>
+<style>
+  .slideshow-container {
+    width: 100%;
+    position: relative;
+    margin: auto;
+  }
+
+  .slides {
+    display: none;
+    width: 100%;
+    height: 500px; /* Adjust the height as needed */
+  }
+
+  .prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+  }
+
+  .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+
+  .prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+  }
+</style>
+</head>
+<body>
+
+<div class="slideshow-container">
+
+  <div class="slides">
+    <img src="img/1.jpg" style="width:100%">
+  </div>
+
+  <div class="slides">
+    <img src="img/2.jpg" style="width:100%">
+  </div>
+
+  <div class="slides">
+    <img src="img/3.jpg" style="width:100%">
+  </div>
+
+  <a class="prev" onclick="plusSlides(-1)">❮</a>
+  <a class="next" onclick="plusSlides(1)">❯</a>
+
+</div>
+
+<script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("slides");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+  }
+  slides[slideIndex-1].style.display = "block";  
+}
+</script>
+
+</body>
+</html>
