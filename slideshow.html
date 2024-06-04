@@ -12,6 +12,7 @@
     display: none;
     width: 100%;
     height: 500px; /* Adjust the height as needed */
+    transition: transform 0.5s ease; /* Add sliding animation */
   }
 
   .prev, .next {
@@ -75,13 +76,13 @@ function plusSlides(n) {
 function showSlides() {
   var i;
   var slides = document.getElementsByClassName("slides");
+  if (slideIndex >= slides.length) {slideIndex = 0} // Loop back to the first slide
+  if (slideIndex < 0) {slideIndex = slides.length - 1} // Loop back to the last slide
   for (i = 0; i < slides.length; i++) {
     slides[i].style.display = "none";  
   }
-  slideIndex++;
-  if (slideIndex > slides.length) {slideIndex = 1}    
-  slides[slideIndex-1].style.display = "block";
-  autoSlide = setTimeout(showSlides, 3000); // Change image every 3 seconds
+  slides[slideIndex].style.display = "block";
+  autoSlide = setTimeout(showSlides, 5000); // Change image every 3 seconds
 }
 
 // Call showSlides to start the slideshow
