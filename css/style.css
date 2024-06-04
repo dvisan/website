@@ -14,10 +14,10 @@ body{
  
   .slider-frame{
       overflow: hidden;
-      height: auto;
-      width: auto;
-      margin-left: auto;
-      margin-top: auto;
+      height: 800px;
+      width: 1200px;
+      margin-left: 360px;
+      margin-top: 20px;
   }
  
   /*---------- SLIDE ANIMATION --------------*/
@@ -52,8 +52,8 @@ body{
   }
  
   .slide-images{
-      width: auto;
-      height: auto;
+      width: 3600px;
+      height: 800px;
       margin: 0 0 0 -2400px;
       position: relative;
       -webkit-animation-name: slide_animation;
@@ -69,8 +69,8 @@ body{
   }
  
   .img-container{
-      height: auto;
-      width: auto;
+      height: 1200px;
+      width: 1200px;
       position: relative;
       float: left;
   }
