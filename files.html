@@ -103,7 +103,24 @@ section p{
 
    <section id="mySection">
 
-   <iframe src="https://github.com/dvisan/website/tree/main/files" style="width:100%; height:300px;"></iframe>
+   <div id="repoContents">Loading...</div>
+
+<script>
+  // Replace 'dvisan' with your GitHub username and 'website' with your repository name
+  const repoUrl = 'https://api.github.com/repos/dvisan/website/contents/files';
+
+  fetch(repoUrl)
+    .then(response => response.json())
+    .then(data => {
+      let content = '<ul>';
+      for (let file of data) {
+        content += `<li><a href="${file.html_url}" target="_blank">${file.name}</a></li>`;
+      }
+      content += '</ul>';
+      document.getElementById('repoContents').innerHTML = content;
+    })
+    .catch(error => console.error('Error:', error));
+</script>
   
 
    </section>
