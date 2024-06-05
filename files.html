@@ -105,45 +105,49 @@ section p{
 
    <div id="repoContents">Loading...</div>
 
-<script>
-  const repoUrl = 'https://api.github.com/repos/dvisan/website/contents/files';
 
-        fetch(repoUrl)
-            .then(response => response.json())
-            .then(data => {
-                let content = '<ul>';
-                for (let file of data) {
-                    if (file.type === 'dir') {
-                        content += `<li><a href="#" onclick="openFolder('${file.url}'); return false;">${file.name}</a></li>`;
-                    } else {
-                        content += `<li><a href="${file.html_url}" target="folderFrame">${file.name}</a></li>`;
-                    }
-                }
-                content += '</ul>';
-                document.getElementById('repoContents').innerHTML = content;
-            })
-            .catch(error => console.error('Error:', error));
+    <script>
+      let historyStack = [];
 
-        function openFolder(url) {
-            fetch(url)
-                .then(response => response.json())
-                .then(data => {
-                    let content = '<ul>';
-                    for (let item of data) {
-                        content += `<li><a href="${item.html_url}" target="folderFrame">${item.name}</a></li>`;
-                    }
-                    content += '</ul>';
-                    document.getElementById('repoContents').innerHTML = content;
-                })
-                .catch(error => console.error('Error:', error));
-        }
+      const repoUrl = 'https://api.github.com/repos/dvisan/website/contents/files';
 
-        function goBack() {
-            window.history.back();
-        }
-</script>
-<iframe id="folderFrame" style="width:100%; height:600px;"></iframe>
+      function fetchAndDisplay(url) {
+        fetch(url)
+          .then(response => response.json())
+          .then(data => {
+            let content = '<ul>';
+            if (historyStack.length) {
+              // Add a back button if there's history
+              content += `<li><a href="#" onclick="goBack(); return false;">Back</a></li>`;
+            }
+            for (let item of data) {
+              if (item.type === 'dir') {
+                content += `<li><a href="#" onclick="openFolder('${item.url}'); return false;">${item.name}</a></li>`;
+              } else {
+                content += `<li><a href="${item.html_url}" target="folderFrame">${item.name}</a></li>`;
+              }
+            }
+            content += '</ul>';
+            document.getElementById('repoContents').innerHTML = content;
+          })
+          .catch(error => console.error('Error:', error));
+      }
 
+      function openFolder(url) {
+        historyStack.push(url); // Save the current path
+        fetchAndDisplay(url);
+      }
+
+      function goBack() {
+        historyStack.pop(); // Go back to the previous path
+        const prevUrl = historyStack.length ? historyStack[historyStack.length - 1] : repoUrl;
+        fetchAndDisplay(prevUrl);
+      }
+
+      // Initialize with the root directory
+      fetchAndDisplay(repoUrl);
+    </script>
+    <iframe id="folderFrame" style="width:100%; height:600px;"></iframe>
   
 
    </section>
