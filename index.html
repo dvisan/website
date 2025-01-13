@@ -15,7 +15,7 @@
 	padding:0;
 	margin:0;
 	background-color:#9B9999;
- 
+
 }
 	html{
 	height: 100%;
@@ -39,21 +39,33 @@ header h1 {
 	    background-color:#35424a;
 		padding-bottom:0px;
 		border-bottom:#e8491d 3px solid;
-		min-height:10px;
+		min-height:60px;
+    display: flex;
+    justify-content: space-between; /* Space out the branding and navigation */
+    align-items: center; /* Vertically align both elements */
 		margin-bottom: 5px;
 }
 
     header #branding{
-     float:left;
-	 padding:0;
-   margin-bottom: auto;
+      display: flex;
+     align-items: center;  /* Vertically centers the content */
+     justify-content: flex-start;  /* Aligns to the left */
+     padding: 0;
+     margin-bottom: auto;
+     margin-top: auto;
+}
+   header #branding img {
+    height: 40px; /* Adjust the logo size to match the navbar height */
+    width: auto;  /* Maintain the aspect ratio */
 }
 
     .container{
-  width:95%;
-  margin: auto;
-  margin-bottom: 1px;
-  overflow:hidden;
+      width: 95%;
+        margin: auto;
+        margin-bottom: 1px;
+        display: flex; /* Use flex to align branding and navigation horizontally */
+        justify-content: space-between; /* Space out the branding and navigation */
+        align-items: center; /* Vertically align them */
 }
 
   nav{
@@ -82,7 +94,7 @@ section p{
     <header>
       <div class="container">
         <div id="branding">
-          <h1><span style="color:#e8491d ;font-size:100%"><!--<img src="img/logo/logo.jpeg" width="30px" height="30px">-->Daniel's Blog</span> </h1>
+          <span style="color:#e8491d ;font-size:100%"><a href="https://dblog.ddns.net"><img src="img/logo/logo_new.jpeg" width="32px" height="32px"></a> </span> 
 	   </div>
 
 	   <nav>
@@ -106,38 +118,38 @@ section p{
 
    <p style="font-size:120%">
    Welcome! This website provides references to my publicly-available professional work. Why the simple design?
-	   
+
    </p>
 	   <ul>
     <li style="font-size:120%">
-	    
+
       <b>Accessible: </b> Not everyone has high-speed Internet access.
       You won't find clunky images, videos, or advertisements.
       This site is mobile-friendly.
     </li>
     <li style="font-size:120%">
-	    
+
       <b>Navigable: </b>Most of this website is plain text
       and can be searched using browser search tools.
       Every resource on this website is within two clicks.
     </li>
-   	   
-      
+
+
   </ul><br>
 	   <h2>Content</h2><br>
-	   
+
 	   <ul>
     <li style="font-size:120%">About Me</li><br>
     <li style="font-size:120%">Blog Posts and Announcements</li><br>
   <!--  <li><a href="https://dblog.ddns.net/code.html">Code Projects</a></li> -->
-    
+
 
   </ul> <br>
-	   
 
 
 
-  
+
+
 
    </section>
 

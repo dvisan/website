@@ -10,12 +10,12 @@
     <title>Daniel's Blog</title>
     <link rel="icon" type="image/x-icon" href="/img/logo/logo.jpeg">
 	<style>
-	body {
+  body {
 	height: 100%;
 	padding:0;
 	margin:0;
 	background-color:#9B9999;
- 
+
 }
 	html{
 	height: 100%;
@@ -39,21 +39,33 @@ header h1 {
 	    background-color:#35424a;
 		padding-bottom:0px;
 		border-bottom:#e8491d 3px solid;
-		min-height:10px;
+		min-height:60px;
+    display: flex;
+    justify-content: space-between; /* Space out the branding and navigation */
+    align-items: center; /* Vertically align both elements */
 		margin-bottom: 5px;
 }
 
     header #branding{
-     float:left;
-	 padding:0;
-   margin-bottom: auto;
+      display: flex;
+     align-items: center;  /* Vertically centers the content */
+     justify-content: flex-start;  /* Aligns to the left */
+     padding: 0;
+     margin-bottom: auto;
+     margin-top: auto;
+}
+   header #branding img {
+    height: 40px; /* Adjust the logo size to match the navbar height */
+    width: auto;  /* Maintain the aspect ratio */
 }
 
     .container{
-  width:95%;
-  margin: auto;
-  margin-bottom: 1px;
-  overflow:hidden;
+      width: 95%;
+        margin: auto;
+        margin-bottom: 1px;
+        display: flex; /* Use flex to align branding and navigation horizontally */
+        justify-content: space-between; /* Space out the branding and navigation */
+        align-items: center; /* Vertically align them */
 }
 
   nav{
@@ -65,13 +77,16 @@ p{
 	display: block;
     margin-block-start: 1em;
     margin-block-end: 1em;
+	padding-left: 20px;
 }
-section h1,h2{
+		section h1,h2{
  margin-left: 20px; /* Increase this value to make the left margin thicker */  ;
 }
 section p{
 	padding-left:10px;
 }
+
+
 
 
 	</style>
@@ -80,7 +95,7 @@ section p{
     <header>
       <div class="container">
         <div id="branding">
-          <h1><span style="color:#e8491d ;font-size:100%">Daniel's Blog</span> </h1>
+          <span style="color:#e8491d ;font-size:100%"><a href="https://dblog.ddns.net"><img src="img/logo/logo_new.jpeg" width="32px" height="32px"></a></span> 
 	   </div>
 
 	   <nav>
@@ -110,7 +125,7 @@ section p{
      <ul><li>
        <a href="https://www.linkedin.com/in/daniel-visan-1a77071b0?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app">LinkedIn</a>
      </li></ul>
-  
+
 
    </section>
 

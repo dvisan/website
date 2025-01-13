@@ -9,26 +9,22 @@
     <title>Daniel's Blog</title>
    <link rel="icon" type="image/x-icon" href="/img/logo/logo.jpeg">
 	<style>
-	body {
+  body {
 	height: 100%;
 	padding:0;
 	margin:0;
 	background-color:#9B9999;
+
 }
 	html{
 	height: 100%;
 }
 
-	li{
+header	li{
   float:left;
   display:inline;
   padding: 0 20px 0 20px;
   text-transform:uppercase;
-}
-img {
-    width: 100%;
-    max-width: 100%;
-    height: auto;
 }
 
 header h1 {
@@ -42,45 +38,61 @@ header h1 {
 	    background-color:#35424a;
 		padding-bottom:0px;
 		border-bottom:#e8491d 3px solid;
-		min-height:10px;
+		min-height:60px;
+    display: flex;
+    justify-content: space-between; /* Space out the branding and navigation */
+    align-items: center; /* Vertically align both elements */
 		margin-bottom: 5px;
 }
 
     header #branding{
-     float:left;
-	 padding:0;
-   margin-bottom: auto;
+      display: flex;
+     align-items: center;  /* Vertically centers the content */
+     justify-content: flex-start;  /* Aligns to the left */
+     padding: 0;
+     margin-bottom: auto;
+     margin-top: auto;
+}
+   header #branding img {
+    height: 40px; /* Adjust the logo size to match the navbar height */
+    width: auto;  /* Maintain the aspect ratio */
 }
 
     .container{
-  width:95%;
-  margin: auto;
-  margin-bottom: 1px;
-  overflow:hidden;
+      width: 95%;
+        margin: auto;
+        margin-bottom: 1px;
+        display: flex; /* Use flex to align branding and navigation horizontally */
+        justify-content: space-between; /* Space out the branding and navigation */
+        align-items: center; /* Vertically align them */
 }
-p{
-	align:center;
-}
+
   nav{
   float:right;
   margin:2px;
   margin-top:2px;
 }
-
-
-section h1,h2{
+p{
+	display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+	padding-left: 20px;
+}
+		section h1,h2{
  margin-left: 20px; /* Increase this value to make the left margin thicker */  ;
 }
 section p{
 	padding-left:10px;
 }
+
+
 	</style>
   </head>
   <body>
     <header>
       <div class="container">
         <div id="branding">
-          <h1><span style="color:#e8491d ;font-size:100%">Daniel's Blog</span></h1>
+          <span style="color:#e8491d ;font-size:100%"><a href="https://dblog.ddns.net"><img src="img/logo/logo_new.jpeg" width="32px" height="32px"></a></span>
 	   </div>
 
 	   <nav>
@@ -102,7 +114,7 @@ section p{
 
    <section id="mySection">
 <h1 style="text-decoration:underline; color:#000000">How to make a wireguard vpn server on Windows 11</h1><h4> 05.06.2024</h4>
-   <p style="font-size:120%">The first thing you will need in order to get started is a PC running windows 10 or newer that is connected via ethernet cable and is able to 
+   <p style="font-size:120%">The first thing you will need in order to get started is a PC running windows 10 or newer that is connected via ethernet cable and is able to
    stay turned on for an extended period of time, or you need to have some way to switch it on/off remotely. </p><br>
 	   <p style="font-size:120%">To be continued....</p>
   <h1> <a href="https://www.youtube.com/watch?v=EXfFBEuCAr0" style="text-decoration:underline; color:#000000" target="blank" >How to host your website on github</a></h1><h4> 04.06.2024</h4>
@@ -110,7 +122,7 @@ section p{
   1) First you need to create an account on <a href="https://github.com/" target=_blank> github</a> and you should choose a short username if it is available.<br>
   2) Create your first public repository (it is better if the repository also has a shorter name).<br><br><img src="img/self_host/image1.png" alt="image1"><br><br>
   3) Go into the settings for your newly created repository then click "Pages" and create a new "Public page".<br><br><img src="img/self_host/image2.PNG" alt="image2"><br><br>
-  4) In the Pages tab you can view the url where your website is available at and if you don't like that url you can always set a custom "CNAME" domain name using a service like <a href="https://www.noip.com/" target=_blank>No-Ip</a>. <br>I also recommend checking 
+  4) In the Pages tab you can view the url where your website is available at and if you don't like that url you can always set a custom "CNAME" domain name using a service like <a href="https://www.noip.com/" target=_blank>No-Ip</a>. <br>I also recommend checking
 	 the enforce HTTPS button so that the connection to your website is always secured.<br><br>
 	 <img src="img/self_host/image3.PNG" alt="image3">
    </p>
