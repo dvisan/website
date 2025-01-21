@@ -22,11 +22,15 @@
   .navbar {
     overflow: hidden;
     background-color: #35424a;
-    border-bottom:#e8491d 3px solid
+    border-bottom:#e8491d 3px solid;
+    position: fixed;
+    top: 0;
+    width: 100%;
           }
 
   .navbar a {
           float: left;
+          display: block;
           font-size: 16px;
           color: white;
           text-align: center;
@@ -37,6 +41,12 @@
   .navbar a:hover, .dropdown:hover .dropbtn {
             background-color: #e8491d;
                                             }
+
+  .main {
+            /* padding: 16px; */
+            margin-top: 56px;
+            /* height: 1500px; /* Used in this example to enable scrolling */ */
+        }
       h1 {
             margin-left:10px;
             margin-right:10px;
@@ -62,16 +72,16 @@
              margin-right:10px;
         }
 
-        img {
-                max-width: 100%;
-                height: auto;
-            }
+img {
+        max-width: 100%;
+        height: auto;
+    }
 
 	</style>
   </head>
   <body>
      <div class="navbar"">
-          <span style="color:#e8491d ;font-size:100%"><a href="https://dblog.ddns.net"><img src="img/logo/logo_new.jpeg" width="32px" height="32px"></a></span>
+          <span style="color:#e8491d ;font-size:100%"><a href="https://dblog.ddns.net"><img src="img/logo/logo_new.jpeg" width="16px" height="32px"></a></span>
 
 
 
@@ -82,7 +92,7 @@
 
 </div>
 
-
+<div class="main">
 
 	   <a class="weatherwidget-io" href="https://forecast7.com/en/46d0620d62/sannicolau-mare/" data-label_1="SÂNNICOLAU MARE" data-label_2="WEATHER" data-theme="original" >SÂNNICOLAU MARE WEATHER</a>
 
@@ -152,7 +162,7 @@
 
 
 
-
+</div>
 
   </body>
 </html>
