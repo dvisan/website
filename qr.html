@@ -3,13 +3,97 @@
 <meta http-equiv="refresh" content="0; url=https://dvisan.github.io/website/">
 
 <!--
-REDIRECȚIONARE CĂTRE UN NUMĂR DE TELEFON
+============================================================
+ALTE VARIANTE DE REDIRECȚIONARE
+============================================================
 
-Pentru a folosi această variantă:
-1. Comentează linia de mai sus cu "exemplu.ro"
-2. Șterge comentariile HTML din jurul liniei de mai jos
+1. Redirecționare către o altă pagină HTML
+------------------------------------------------------------
+<meta http-equiv="refresh" content="0; url=pagina.html">
 
+
+2. Redirecționare către un URL cu întârziere de 5 secunde
+------------------------------------------------------------
+<meta http-equiv="refresh" content="5; url=https://exemplu.ro">
+
+
+3. Redirecționare către o adresă de email
+------------------------------------------------------------
+<meta http-equiv="refresh" content="0; url=mailto:contact@exemplu.ro">
+
+
+4. Redirecționare către un număr de telefon
+------------------------------------------------------------
 <meta http-equiv="refresh" content="0; url=tel:+40722123456">
+
+
+5. Deschiderea unui SMS către un număr
+------------------------------------------------------------
+<meta http-equiv="refresh" content="0; url=sms:+40722123456?body=Salut">
+
+
+6. Redirecționare către WhatsApp
+------------------------------------------------------------
+<meta http-equiv="refresh" content="0; url=https://wa.me/40722123456">
+
+
+7. Redirecționare către o pagină cu HTTPS
+------------------------------------------------------------
+<meta http-equiv="refresh" content="0; url=https://exemplu.ro/pagina">
+
+
+8. Redirecționare către un URL cu parametri
+------------------------------------------------------------
+<meta http-equiv="refresh" content="0; url=https://exemplu.ro/?id=123&pagina=home">
+
+
+9. Redirecționare către o pagină locală dintr-un folder
+------------------------------------------------------------
+<meta http-equiv="refresh" content="0; url=pages/contact.html">
+
+
+10. Redirecționare către un fragment din aceeași pagină
+------------------------------------------------------------
+<meta http-equiv="refresh" content="0; url=#sectiune">
+
+
+11. Redirecționare JavaScript
+------------------------------------------------------------
+<script>
+    window.location.href = "https://exemplu.ro/";
+</script>
+
+
+12. Redirecționare JavaScript după câteva secunde
+------------------------------------------------------------
+<script>
+    setTimeout(function () {
+        window.location.href = "https://exemplu.ro/";
+    }, 5000);
+</script>
+
+
+13. Redirecționare folosind location.replace()
+------------------------------------------------------------
+<script>
+    window.location.replace("https://exemplu.ro/");
+</script>
+
+
+14. Link care redirecționează la apăsare
+------------------------------------------------------------
+<a href="https://exemplu.ro/">Continuă</a>
+
+
+15. Redirecționare către Google
+------------------------------------------------------------
+<meta http-equiv="refresh" content="0; url=https://www.google.com/">
+
+============================================================
+IMPORTANT:
+Pentru a activa o variantă, lasă activă o singură metodă
+de redirecționare și elimină/comentează celelalte variante.
+============================================================
 -->
 
 <title>Redirecționare</title>
