@@ -88,6 +88,52 @@ ALTE VARIANTE DE REDIRECȚIONARE
 15. Redirecționare către Google
 ------------------------------------------------------------
 <meta http-equiv="refresh" content="0; url=https://www.google.com/">
+=====================================================================
+16. Afisare mesaj
+    <!--
+============================================================
+VARIANTĂ PENTRU AFIȘAREA UNUI MESAJ TEXT
+============================================================
+
+Pentru a afișa un mesaj, în loc să redirecționezi:
+
+<body>
+    <h1>Salut!</h1>
+    <p>Acesta este mesajul meu.</p>
+</body>
+
+
+Mesaj centrat pe pagină:
+
+<body>
+    <div style="text-align: center; margin-top: 50px;">
+        <h1>Salut!</h1>
+        <p>Pagina a fost încărcată cu succes.</p>
+    </div>
+</body>
+
+
+Mesaj simplu, fără titlu:
+
+<body>
+    <p>Acesta este mesajul afișat utilizatorului.</p>
+</body>
+
+
+Mesaj care apare după câteva secunde:
+
+<body>
+    <p id="mesaj"></p>
+
+    <script>
+        setTimeout(function () {
+            document.getElementById("mesaj").textContent =
+                "Acesta este mesajul meu!";
+        }, 3000);
+    </script>
+</body>
+
+
 
 ============================================================
 IMPORTANT:
