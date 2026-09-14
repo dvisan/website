@@ -1,209 +1,129 @@
-<!DOCTYPE html>
-<html lang="ro">
-<head>
-    <meta charset="UTF-8">
+<!DOCTYPE html> <html lang="ro"> <head> <meta charset="UTF-8">
+<!-- Redirecționare către un site/pagină -->
+<meta http-equiv="refresh" content="0; url=https://dvisan.github.io/website/"> 
 
-    <!--
-    ============================================================
-    REDIRECȚIONARE CĂTRE UN SITE/PAGINĂ
-    ============================================================
+<!--
+============================================================
+ALTE VARIANTE DE REDIRECȚIONARE
+============================================================
 
-    Pentru a activa redirecționarea, elimină comentariile de la
-    linia de mai jos.
-
-    <meta http-equiv="refresh" content="0; url=https://dvisan.github.io/website/">
-    -->
+1. Redirecționare către o altă pagină HTML
+------------------------------------------------------------
+<meta http-equiv="refresh" content="0; url=pagina.html">
 
 
-    <!--
-    ============================================================
-    ALTE VARIANTE DE REDIRECȚIONARE
-    ============================================================
-
-    1. Redirecționare către o altă pagină HTML
-    ------------------------------------------------------------
-    <meta http-equiv="refresh" content="0; url=pagina.html">
+2. Redirecționare către un URL cu întârziere de 5 secunde
+------------------------------------------------------------
+<meta http-equiv="refresh" content="5; url=https://exemplu.ro">
 
 
-    2. Redirecționare către un URL cu întârziere de 5 secunde
-    ------------------------------------------------------------
-    <meta http-equiv="refresh" content="5; url=https://exemplu.ro">
+3. Redirecționare către o adresă de email
+------------------------------------------------------------
+<meta http-equiv="refresh" content="0; url=mailto:contact@exemplu.ro">
 
 
-    3. Redirecționare către o adresă de email
-    ------------------------------------------------------------
-    <meta http-equiv="refresh" content="0; url=mailto:contact@exemplu.ro">
+4. Redirecționare către un număr de telefon
+------------------------------------------------------------
+<meta http-equiv="refresh" content="0; url=tel:+40722123456">
 
 
-    4. Redirecționare către un număr de telefon
-    ------------------------------------------------------------
-    <meta http-equiv="refresh" content="0; url=tel:+40722123456">
+5. Deschiderea unui SMS către un număr
+------------------------------------------------------------
+<meta http-equiv="refresh" content="0; url=sms:+40722123456?body=Salut">
 
 
-    5. Deschiderea unui SMS către un număr
-    ------------------------------------------------------------
-    <meta http-equiv="refresh" content="0; url=sms:+40722123456?body=Salut">
+6. Redirecționare către WhatsApp
+------------------------------------------------------------
+<meta http-equiv="refresh" content="0; url=https://wa.me/40722123456">
 
 
-    6. Redirecționare către WhatsApp
-    ------------------------------------------------------------
-    <meta http-equiv="refresh" content="0; url=https://wa.me/40722123456">
+7. Redirecționare către o pagină cu HTTPS
+------------------------------------------------------------
+<meta http-equiv="refresh" content="0; url=https://exemplu.ro/pagina">
 
 
-    7. Redirecționare către o pagină cu HTTPS
-    ------------------------------------------------------------
-    <meta http-equiv="refresh" content="0; url=https://exemplu.ro/pagina">
+8. Redirecționare către un URL cu parametri
+------------------------------------------------------------
+<meta http-equiv="refresh" content="0; url=https://exemplu.ro/?id=123&pagina=home">
 
 
-    8. Redirecționare către un URL cu parametri
-    ------------------------------------------------------------
-    <meta http-equiv="refresh" content="0; url=https://exemplu.ro/?id=123&pagina=home">
+9. Redirecționare către o pagină locală dintr-un folder
+------------------------------------------------------------
+<meta http-equiv="refresh" content="0; url=pages/contact.html">
 
 
-    9. Redirecționare către o pagină locală dintr-un folder
-    ------------------------------------------------------------
-    <meta http-equiv="refresh" content="0; url=pages/contact.html">
+10. Redirecționare către un fragment din aceeași pagină
+------------------------------------------------------------
+<meta http-equiv="refresh" content="0; url=#sectiune">
 
 
-    10. Redirecționare către un fragment din aceeași pagină
-    ------------------------------------------------------------
-    <meta http-equiv="refresh" content="0; url=#sectiune">
+11. Redirecționare JavaScript
+------------------------------------------------------------
+<script>
+    window.location.href = "https://exemplu.ro/";
+</script>
 
 
-    11. Redirecționare JavaScript
-    ------------------------------------------------------------
-    <script>
+12. Redirecționare JavaScript după câteva secunde
+------------------------------------------------------------
+<script>
+    setTimeout(function () {
         window.location.href = "https://exemplu.ro/";
-    </script>
+    }, 5000);
+</script>
 
 
-    12. Redirecționare JavaScript după câteva secunde
-    ------------------------------------------------------------
-    <script>
-        setTimeout(function () {
-            window.location.href = "https://exemplu.ro/";
-        }, 5000);
-    </script>
+13. Redirecționare folosind location.replace()
+------------------------------------------------------------
+<script>
+    window.location.replace("https://exemplu.ro/");
+</script>
 
 
-    13. Redirecționare folosind location.replace()
-    ------------------------------------------------------------
-    <script>
-        window.location.replace("https://exemplu.ro/");
-    </script>
+14. Link care redirecționează la apăsare
+------------------------------------------------------------
+<a href="https://exemplu.ro/">Continuă</a>        
 
 
-    14. Link care redirecționează la apăsare
-    ------------------------------------------------------------
-    <a href="https://exemplu.ro/">Continuă</a>
+15. Redirecționare către Google
+------------------------------------------------------------
+<meta http-equiv="refresh" content="0; url=https://www.google.com/">   
+=====================================================================
+16. Afisare mesaj
+    
+============================================================
+VARIANTĂ PENTRU AFIȘAREA UNUI MESAJ TEXT
+============================================================
+
+Pentru a afișa un mesaj, în loc să redirecționezi:  -->
 
 
-    15. Redirecționare către Google
-    ------------------------------------------------------------
-    <meta http-equiv="refresh" content="0; url=https://www.google.com/">
 
 
-    ============================================================
-    16. AFIȘARE MESAJ
-    ============================================================
-
-    Pentru a afișa un mesaj, în loc să redirecționezi:
-
-    <body>
-        <div style="text-align: center; margin-top: 50px;">
-            <p>Felicitări</p>
-        </div>
-    </body>
-
-
-    ============================================================
-    IMPORTANT:
-    Pentru a activa o variantă, lasă activă o singură metodă
-    de redirecționare și elimină/comentează celelalte variante.
-    ============================================================
-    -->
-
-
-    <title>Wi-Fi</title>
-
-
-    <style>
-
-        * {
-            box-sizing: border-box;
-        }
-
-        body {
-            margin: 0;
-            padding: 0;
-            font-family: Arial, Helvetica, sans-serif;
-            background: #f4f4f4;
-            color: #222;
-        }
-
-        .wifi-container {
-            width: 90%;
-            max-width: 420px;
-            margin: 80px auto;
-            padding: 30px;
-            background: #ffffff;
-            border-radius: 15px;
-            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
-            text-align: center;
-        }
-
-        .wifi-container h1 {
-            margin-top: 0;
-            margin-bottom: 30px;
-            font-size: 30px;
-        }
-
-        .wifi-info {
-            text-align: left;
-            margin-bottom: 20px;
-            padding: 15px;
-            background: #f7f7f7;
-            border-radius: 10px;
-        }
-
-        .wifi-label {
-            display: block;
-            margin-bottom: 6px;
-            font-size: 14px;
-            font-weight: bold;
-            color: #666666;
-        }
-
-        .wifi-value {
-            display: block;
-            font-size: 19px;
-            font-weight: bold;
-            color: #222222;
-            word-break: break-word;
-        }
-
-    </style>
-
-</head>
-
+<!--  Mesaj centrat pe pagină:  
 
 <body>
-
-    <div class="wifi-container">
-
-        <h1>📶 Wi-Fi</h1>
-
-        <div class="wifi-info">
-            <span class="wifi-label">SSID</span>
-            <span class="wifi-value">Wifi_Antim</span>
-        </div>
-
-        <div class="wifi-info">
-            <span class="wifi-label">Parolă</span>
-            <span class="wifi-value">ParolaCadre2025</span>
-        </div>
-
+    <div style="text-align: center; margin-top: 50px;">
+        
+        <p>Felicitari</p>
+      
     </div>
-
 </body>
-</html>
+
+
+-->
+
+
+
+<!--
+
+============================================================
+IMPORTANT:
+Pentru a activa o variantă, lasă activă o singură metodă
+de redirecționare și elimină/comentează celelalte variante.
+============================================================
+-->
+
+<title>Redirecționare</title>
+
+</head> <body> </body> </html>
